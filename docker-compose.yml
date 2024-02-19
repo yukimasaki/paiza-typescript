@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  paiza:
+    container_name: paiza-container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3093:3000
+    volumes:
+      - ./paiza:/work
+    tty: true
+    restart: always
